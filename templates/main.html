@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Method from HTML</title>
+</head>
+<body>
+    <h1>Data from Python</h1>
+    <p>{{ data }}</p>
+    <button onclick="get_data()">Call Method</button>
+
+    <script>
+        function get_data() {
+            // Make an AJAX request to the server to call the method
+            fetch('/get_data')
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response from the server
+                    console.log(data);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

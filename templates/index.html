@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block head%}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yield Curves Data</title>
+{% endblock %}
+
+
+{% block body%}
+<h1>Yield Curves Data</h1>
+    
+<!-- Display the plot image -->
+<img src="{{ plot_path }}" alt="Yield Curves Plot">
+
+<!-- Add a button to download the DataFrame as a CSV -->
+
+<form action="/download_csv" method="get">
+    <button type="submit">Download CSV</button>
+</form>
+{% endblock %}
+
+
+
+
+
+
+
+
